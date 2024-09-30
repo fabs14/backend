@@ -50,7 +50,7 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true); // Permitir cookies y credenciales
-        config.setAllowedOrigins(Arrays.asList("http://localhost:3000")); // Permitir origen del frontend
+        config.setAllowedOrigins(Arrays.asList("https://frontendsytlostore-production.up.railway.app")); // Permitir origen del frontend
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Métodos HTTP permitidos
         config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type")); // Encabezados permitidos
         source.registerCorsConfiguration("/**", config); // Aplicar esta configuración a todas las rutas
@@ -62,7 +62,7 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true); // Permitir credenciales
-        config.addAllowedOrigin("http://localhost:3000"); // Permitir el origen de la app frontend
+        config.addAllowedOrigin("https://frontendsytlostore-production.up.railway.app"); // Permitir el origen de la app frontend
         config.addAllowedHeader("*"); // Permitir todos los encabezados
         config.addAllowedMethod("*"); // Permitir todos los métodos
         source.registerCorsConfiguration("/**", config);
